@@ -1,0 +1,146 @@
+
+*{
+  --theme-first-color: rgb(63, 82, 255);
+  --theme-second-color: rgb(134, 146, 255);
+  --invert-icon: invert();
+  --font-first-color: rgb(255, 255, 255);
+  --font-second-color: rgb(199, 199, 199);
+  --font-third-color: black;
+  --main-font: 'Lucida Console';
+  margin: 0;
+  padding: 0;
+}
+.App{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  min-height: 100px;
+  display: flex;
+  font-family: var(--main-font);
+  font-size: 50px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  background-color: var(--theme-second-color);
+  color: var(--font-first-color);
+}
+.header > img{
+  height: 40px;
+  filter: var(--invert-icon);
+}
+
+.input-container{
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.input-container > .task-input{
+  font-family: var(--main-font);
+  font-size: 20px;
+  width: 400px;
+  border: solid var(--theme-second-color);
+  border-radius: 10px;
+  outline: none;
+  padding-left: 5px;
+  height: 30px;
+}
+.input-container > .task-input:focus{
+  border: solid var(--theme-first-color);
+  transition: 0.05s linear;
+}
+.input-container > label{
+  font-family: var(--main-font);
+  font-size: 15px;
+}
+.input-container > .date-input{
+  font-family: var(--main-font);
+  font-size: 15px;
+  cursor: pointer;
+  border: solid var(--theme-second-color);
+  border-radius: 10px;
+  outline: none;
+  height: 30px;
+}
+.input-container > .date-input:focus{
+  border: solid var(--theme-first-color);
+  transition: 0.05s linear;
+}
+.input-container > button{
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--theme-second-color);
+  border-radius: 10px;
+  border: none;
+  scale: 1;
+  transition: 0.05s linear;
+  cursor: pointer;
+}
+.input-container > button:hover{
+  scale: 1.1;
+  transition: 0.05s linear;
+}
+.input-container > button > img{
+  height: 25px;
+  background: none;
+
+}
+.task-container{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  overflow-y: auto;
+}
+.task-item{
+  display: grid;
+  grid-template-columns: 20px 400px 20px;
+  font-family: var(--main-font);
+  background-color: var(--theme-second-color);
+  height: 40px;
+  padding: 5px;
+  align-items: center;
+  border-radius: 15px;
+  padding-right: 20px;
+  padding-left: 10px;
+  
+}
+.task-item > input{
+  height: 20px;
+  cursor: pointer;
+}
+.task-item > p{
+  margin-left: 10px;
+}
+.task-item > button{
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  scale: 1;
+  transition: 0.05s linear;
+  cursor: pointer;
+}
+.task-item > button:hover{
+  scale: 1.1;
+  transition: 0.05s linear;
+}
+.task-item > button > img{
+  height: 30px;
+  filter: var(--invert-icon);
+}
